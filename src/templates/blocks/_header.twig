@@ -1,0 +1,22 @@
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__top">
+            <h1 class="header__title visually-hidden">Synth</h1>
+            <div class="header__logo">
+                {% include 'components/logo.twig' %}
+            </div>
+            <div class="header__profile">
+                {% include 'components/profile.twig' %}
+            </div>
+        </div>
+        {% include 'components/nav.twig' %}
+        <div class="header__active-btn-wrap">
+            <button class="header__active-btn button button_circle">
+                <span class="button__icon">
+                    {% include 'icons/plus.svg.twig' %}
+                </span>
+            </button>
+        </div>
+
+    </div>
+</header>

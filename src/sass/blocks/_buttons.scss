@@ -1,0 +1,89 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: (20/16);
+    background-color: $color-2;
+    transition: $time-sm ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &__icon,
+    &__text {
+        svg path {
+            transition: $time-sm ease-in-out;
+        }
+    }
+
+    &_pink {
+        color: $color-4;
+
+        svg path {
+            fill: currentColor;
+        }
+    }
+
+    &_edit {
+        .button__text {
+            text-decoration: underline;
+        }
+    }
+
+    &_transparent {
+        background-color: transparent;
+    }
+
+    &_drop {
+        box-sizing: content-box;
+        width: 16px;
+        height: 16px;
+        padding: 4px;
+
+        &:hover {
+            // color: $color-5;
+            opacity: 1;
+
+            .button__icon {
+                svg path {
+                    // fill: currentColor;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+
+    &_circle {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+
+        svg {
+            transition: transform $time-md ease-in;
+        }
+
+        &:hover {
+            opacity: 1;
+
+            svg {
+                transform: rotate(180deg);
+                transition: transform $time-md ease-out;
+            }
+        }
+    }
+
+    &_share {
+        font-size: 18px;
+        line-height: (25/18);
+    }
+    &__icon {
+        display: flex;
+    }
+
+    &__text {
+        margin-left: 8px;
+    }
+}

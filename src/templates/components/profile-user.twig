@@ -1,0 +1,30 @@
+<div class="profile-user">
+    <a href="" class="profile-user__name">Arthur Wood</a>
+    <a href="" class="profile-user__avatar avatar"><img width="32" height="32" src="../../img/user-pic.jpg"
+            alt="user picture"></a>
+    <div class="dropdown">
+        <button class="dropdown__btn button button_drop button_transparent">
+            <span class="button__icon">
+                {% include 'icons/arrow.svg.twig' %}
+            </span>
+        </button>
+        <div class="dropdown__content dropdown__content_pos_bottom">
+            <ul class="dropdown-content">
+                <li class="dropdown-content__item">
+                    <button class="dropdown-content__btn">
+                        <span class="dropdown-content__icon">
+                            {% include 'icons/report.svg.twig' %}
+                        </span> Item 1
+                    </button>
+                </li>
+                <li class="dropdown-content__item">
+                    <button class="dropdown-content__btn">
+                        <span class="dropdown-content__icon">
+                            {% include 'icons/block.svg.twig' %}
+                        </span> Item 2
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

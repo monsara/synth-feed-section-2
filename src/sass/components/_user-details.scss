@@ -1,0 +1,106 @@
+.user-details {
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    color: $color-7;
+    @include mobile {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    &__header {
+        display: flex;
+        margin-bottom: 32px;
+    }
+
+    &__info {
+        position: relative;
+    }
+
+    &__avatar {
+        width: 120px;
+        height: 120px;
+        margin-right: 24px;
+        flex-shrink: 0;
+        overflow: hidden;
+        @include media($xsm) {
+            margin-right: 15px;
+            flex-shrink: 1;
+        }
+    }
+
+    &__name {
+        margin-bottom: 8px;
+        padding-right: 40px;
+        font-family: $font-2;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: (26/24);
+
+        // Limit the number of lines in a block
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        max-height: 50px; /* fallback */
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+
+        @include media($xsm) {
+            padding-right: 30px;
+            font-size: 18px;
+        }
+    }
+
+    &__nickname {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: (20/16);
+        letter-spacing: 0.025em;
+    }
+
+    &__followers {
+        display: flex;
+        margin-bottom: 23px;
+
+        &-item {
+            font-size: 16px;
+            line-height: (24/16);
+
+            &:not(:last-child) {
+                margin-right: 48px;
+                @include media($xsm) {
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        &-number {
+            display: block;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: (24/18);
+            text-align: center;
+        }
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: 0;
+        right: 16px;
+        @include media($xsm) {
+            right: 0;
+        }
+
+        /* 
+           TODO: remove this code after adding JS logic - 
+           change modifier on dropdown__content_pos_bottom instead 
+           dropdown__content_pos_bottom_left on mobile screen
+        */
+        // .dropdown__content {
+        //     @include mobile {
+        //         left: initial;
+        //         right: 0;
+        //     }
+        // }
+    }
+}

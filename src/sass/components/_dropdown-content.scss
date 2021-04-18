@@ -1,0 +1,38 @@
+.dropdown-content {
+    min-width: 176px;
+    padding: 24px 0;
+    border-radius: 8px;
+    background: $color-2;
+    overflow: hidden;
+    opacity: 0.94;
+    @include media($xsm) {
+        padding: 15px 0;
+    }
+
+    &__item {
+        display: flex;
+        padding: 9px 26px 9px 23px;
+        align-items: center;
+        font-size: 16px;
+        line-height: (22/16);
+        transition: background $time-sm ease-in-out;
+        cursor: pointer;
+        @include mobile {
+            padding: 9px 20px 9px 20px;
+        }
+
+        &:hover {
+            background-color: $color-8;
+        }
+    }
+
+    &__btn {
+        display: inherit;
+        align-items: inherit;
+    }
+
+    &__icon {
+        display: flex;
+        margin-right: 16px;
+    }
+}

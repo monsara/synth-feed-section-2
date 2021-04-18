@@ -1,0 +1,39 @@
+.nav {
+    display: flex;
+
+    &__item {
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: (19/14);
+        &:not(:last-child) {
+            margin-right: 37px;
+            @include mobile {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        transition: $time-sm ease-in-out;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 5px;
+            margin-top: 19px;
+            background: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+            transition: $time-sm ease-in-out;
+        }
+
+        &:hover,
+        &:active {
+            text-shadow: 0 0 0.65px $color-3, 0 0 0.65px $color-3;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

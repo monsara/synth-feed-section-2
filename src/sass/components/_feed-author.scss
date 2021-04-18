@@ -1,0 +1,30 @@
+.feed-author {
+    display: flex;
+    align-items: center;
+
+    &__avatar {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background-color: $color-9;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: (19/14);
+
+        // Limit the number of lines in a block
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        max-height: 19px; /* fallback */
+        -webkit-line-clamp: 1; /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+}

@@ -1,0 +1,54 @@
+.switch {
+    &__control {
+        position: relative;
+        z-index: 0;
+        display: block;
+        width: 40px;
+        height: 24px;
+        border-radius: 50px;
+        background: $color-5;
+        cursor: pointer;
+        transition: $time-sm;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            display: inline-block;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: $color-2;
+            transition: $time-sm;
+        }
+
+        &:after {
+            content: "";
+            display: inline-block;
+            display: none;
+            position: absolute;
+            left: 11px;
+            top: 11px;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            transition: $time-sm;
+        }
+    }
+
+    // input:checked + &__control {
+    //     background: $color-5;
+    // }
+
+    &__checkbox {
+        display: none;
+
+        &:checked + .switch__control:before {
+            content: "";
+            position: absolute;
+            left: 19px;
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<section class="feed">
+    <div class="container">
+        <div class="feed__grid">
+            <div class="feed__col feed__col_left">
+                {% include 'components/user-details.twig' %}
+            </div>
+            <div class="feed__col feed__col_right">
+                <div class="feed__privacy-switcher">
+                    Public
+                    <label class="feed__switch">
+                        <input type="checkbox" class="switch__checkbox" />
+                        <span class="switch__control"></span>
+                    </label>
+                    Privet
+                </div>
+                {% include 'components/feed-list.twig' %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+.stats {
+    display: flex;
+    flex-shrink: 0;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+}

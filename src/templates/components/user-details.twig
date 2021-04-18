@@ -1,0 +1,61 @@
+<div class="user-details">
+    <div class="user-details__header">
+        <div class="user-details__avatar">
+            <img width="120" height="120" src="../../img/avatar.jpg" alt="" class="avatar">
+        </div>
+        <div class="user-details__info">
+            <h2 class="user-details__name">Benjamin Clementine</h2>
+            <div class="user-details__nickname">@benclementine</div>
+            <a href="" class="user-details__edit-btn button button_pink button_edit button_transparent">
+                <span class="button__icon">
+                    {% include 'icons/edit.svg.twig' %}
+                </span>
+                <span class="button__text">Edit Profile</span>
+            </a>
+            <div class="user-details__dropdown dropdown">
+                <button class="button button_drop button_transparent">
+                    <span class="button__icon">
+                        {% include 'icons/3-dots-menu.svg.twig' %}
+                    </span>
+                </button>
+                <div class="dropdown__content dropdown__content_pos_bottom-right">
+                    <ul class="dropdown-content">
+                        <li class="dropdown-content__item">
+                            <button class="dropdown-content__btn">
+                                <span class="dropdown-content__icon">
+                                    {% include 'icons/report.svg.twig' %}
+                                </span>
+                                Report User
+                            </button>
+                        </li>
+                        <li class="dropdown-content__item">
+                            <button class="dropdown-content__btn">
+                                <span class="dropdown-content__icon">
+                                    {% include 'icons/block.svg.twig' %}
+                                </span>
+                                Block User
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="user-details__followers">
+        <li class="user-details__followers-item">
+            <span class="user-details__followers-number">45</span>synths
+        </li>
+        <li class="user-details__followers-item">
+            <span class="user-details__followers-number">110</span>followers
+        </li>
+        <li class="user-details__followers-item">
+            <span class="user-details__followers-number">322</span>following
+        </li>
+    </ul>
+    <p class="user-details__text">Cryptocurrencies including Ethereum, Ripple, and Litecoin have all
+        plunged
+        between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news
+        and
+        live
+        updates on XRP, bitcoin and Ethereum.</p>
+</div>

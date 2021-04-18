@@ -6,10 +6,10 @@
         "start": "gulp",
         "deploy": "npm run build && gh-pages -d dist"
     },
-    "homepage": "https://monsara.github.io/synth-feed-section",
+    "homepage": "https://monsara.github.io/synth-feed-section-2",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/monsara/synth-feed-section.git"
+        "url": "git+https://github.com/monsara/synth-feed-section-2.git"
     },
     "authors": "Popov, popovfreewind@gmail.com",
     "devDependencies": {

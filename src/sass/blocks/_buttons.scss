@@ -60,6 +60,15 @@
         height: 64px;
         border-radius: 50%;
         background: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+        @include media($xsm) {
+            width: 40px;
+            height: 40px;
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
 
         svg {
             transition: transform $time-md ease-in;

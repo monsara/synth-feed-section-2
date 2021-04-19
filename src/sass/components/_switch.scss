@@ -9,6 +9,10 @@
         background: $color-5;
         cursor: pointer;
         transition: $time-sm;
+        @include media($lg + 1) {
+            width: 70px;
+            height: 40px;
+        }
 
         &:before {
             content: "";
@@ -21,6 +25,12 @@
             border-radius: 50%;
             background: $color-2;
             transition: $time-sm;
+            @include media($lg + 1) {
+                top: 4px;
+                left: 4px;
+                height: 32px;
+                width: 32px;
+            }
         }
 
         &:after {
@@ -34,6 +44,9 @@
             width: 18px;
             border-radius: 50%;
             transition: $time-sm;
+            @include media($lg + 1) {
+                left: 34px;
+            }
         }
     }
 
@@ -49,6 +62,9 @@
             position: absolute;
             left: 19px;
             border-radius: 50%;
+            @include media($lg + 1) {
+                left: 34px;
+            }
         }
     }
 }

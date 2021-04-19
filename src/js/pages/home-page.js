@@ -1,6 +1,29 @@
 export default () => {
     changeDropdownPosOnMobileScreens();
     highlightNavlinks();
+    setGapForFeedCardInIE();
+
+    function setGapForFeedCardInIE() {
+        isInternetExplorer();
+
+        function isInternetExplorer() {
+            return window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
+        }
+
+        console.log(isInternetExplorer());
+
+        if (isInternetExplorer() === true) {
+            const gridCards = document.querySelectorAll('.feed-grid__item');
+
+            gridCards.forEach(card => {
+                console.log(card);
+                gridCards.forEach(card => {
+                    card.style.margin = '12px';
+                    console.log(card);
+                });
+            });
+        }
+    }
 
     function changeDropdownPosOnMobileScreens() {
         const dropdownContents = document.querySelectorAll('.dropdown__content');

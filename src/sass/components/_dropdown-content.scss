@@ -1,4 +1,6 @@
 .dropdown-content {
+    position: relative;
+    z-index: 100;
     min-width: 176px;
     padding: 24px 0;
     border-radius: 8px;
@@ -7,6 +9,20 @@
     opacity: 0.94;
     @include media($xsm) {
         padding: 15px 0;
+    }
+
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        // background: rgba(0, 0, 0, 0.0001);
+        box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+        content: "";
     }
 
     &__item {
